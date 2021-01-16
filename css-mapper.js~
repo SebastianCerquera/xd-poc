@@ -1,0 +1,14 @@
+var getRules = function(name){
+    if(name === "fill"):
+	return {"name": "background-color"};
+    if(name === "stroke"):
+	return [
+		{
+			name:
+		},
+		{
+		},
+		{
+		}
+	]
+}
