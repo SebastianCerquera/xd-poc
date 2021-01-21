@@ -11,14 +11,14 @@
 }
     
 .mediaViewInfo {
-	--web-view-name: 1920x1200;
-	--web-view-id: ID1920x1200;
+	--web-view-name: Mesa_de_trabajo_3;
+	--web-view-id: Mesa_de_trabajo_3;
 	--web-scale-on-resize: true;
 	--web-center-horizontally: true;
 	--web-enable-deep-linking: true;
 }
 :root {
-	--web-view-ids: ID1920x1200;
+	--web-view-ids: Mesa_de_trabajo_3;
 }
 * {
 	margin: 0;
@@ -26,14 +26,14 @@
 	box-sizing: border-box;
 	border: none;
 }
-#ID1920x1200 {
+#Mesa_de_trabajo_3 {
 	position: absolute;
 	width: 1920px;
 	height: 1200px;
 	background-color: rgba(255,255,255,1);
 	overflow: hidden;
-	--web-view-name: 1920x1200;
-	--web-view-id: ID1920x1200;
+	--web-view-name: Mesa_de_trabajo_3;
+	--web-view-id: Mesa_de_trabajo_3;
 	--web-scale-on-resize: true;
 	--web-center-horizontally: true;
 	--web-enable-deep-linking: true;
@@ -1825,14 +1825,14 @@
 }
 
 .mediaViewInfo {
-	--web-view-name: Mesa de trabajo 1;
-	--web-view-id: Mesa_de_trabajo_1;
+	--web-view-name: Mesa de trabajo 2;
+	--web-view-id: Mesa_de_trabajo_2;
 	--web-scale-on-resize: true;
 	--web-center-horizontally: true;
 	--web-enable-deep-linking: true;
 }
 :root {
-	--web-view-ids: Mesa_de_trabajo_1;
+	--web-view-ids: Mesa_de_trabajo_2;
 }
 * {
 	margin: 0;
