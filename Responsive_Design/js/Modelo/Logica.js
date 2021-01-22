@@ -4,41 +4,9 @@ const fs = require('fs');
 const AdmZip = require('adm-zip');
 const path = require('path');
 let pathComprimidos = "../../comprimidos";
-let pathDescomprimidos = "../descomprimido/";
+let pathDescomprimidos = "../../descomprimido/";
 let contador = 0;
 let documentosHtmlEncontrados = [];
-
-// class Logica {
-//     constructor() {
-
-//     }
-
-//     leerDirectoriosZip() {
-//         try {
-//             const archivos = fs.readdirSync(pathComprimidos);
-//             let totalArchivos = archivos.length;
-//             return this.leerDirectoriosZip();
-//         }
-//         catch (error) {
-//             console.log(error);
-//             return { flag: false, sMsg: "Ocurrio un error inesperado" };
-//         }
-//     }
-
-//     leerZipIndividual(nomZip, totalZip) {
-//         let nomCarpetaDescomprimida = pathDescomprimidos + nomZip.split(".")[0];
-//         fs.mkdir(nomCarpetaDescomprimida, function (e) {
-//             var zip = new AdmZip(pathComprimidos + "/" + nomZip);
-//             setTimeout(() => {
-//                 zip.extractAllTo(nomCarpetaDescomprimida, true);
-//                 logicaHtml(totalZip);
-//             }, 2000);
-//         });
-//     }
-// }
-
-// let logica = new Logica();
-// logica.leerDirectoriosZip();
 
 function leerDirectoriosZip() {
     fs.readdir(pathComprimidos, function (err, archivos) {
@@ -48,6 +16,7 @@ function leerDirectoriosZip() {
         }
 
         let totalArchivos = archivos.length;
+        console.log("Entra");
         archivos.forEach(element => {
             leerZipIndividual(element, totalArchivos);
         });
@@ -115,7 +84,7 @@ function crearDocumentoHtml() {
         documentosHtml.push({id:'componente_'+nomDocumento,docHtml:pathArchivo,width:dimensiones[0],height:dimensiones[1]});
     });
     let xData = crearHtml.crearArchivoHtml(documentosHtml);
-    let archivoCreado = crearDocumento.crearArchivo("../descomprimido/index.html",xData)
+    let archivoCreado = crearDocumento.crearArchivo(pathDescomprimidos+"/index.html",xData)
     if (archivoCreado) {
         return true;
     }
@@ -123,4 +92,3 @@ function crearDocumentoHtml() {
 }
 
 leerDirectoriosZip();
-// module.exports.logica = leerDirectoriosZip();
