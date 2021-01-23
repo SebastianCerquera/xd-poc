@@ -31,7 +31,7 @@ class GenerarHtml{
             const id = listaArchivosHtml[i].id;
             const width = listaArchivosHtml[i].width;
             const height = listaArchivosHtml[i].height;
-            xData+='<object id="'+id+'" type="text/html" data="'+docHtml+'" width="'+width+'" height="'+height+'"></object>\n';
+            xData+='<iframe id="'+id+'" type="text/html" src="'+docHtml+'" width="'+width+'" height="'+height+'"></iframe>\n';
         }
         return xData;
     }
